@@ -1,0 +1,79 @@
+# Problem 1 — BMI Calculator
+INPUT
+    weight <- USER_INPUT (float) # weight in kilograms (kg)
+    height <- USER_INPUT (float) # height in meters (m)
+
+PROCESS
+    BMI <- weight / (height * height)
+
+OUTPUT
+    PRINT "Your Body Mass Index is: " + BMI
+
+# --- Sample Output ---
+# Input: weight = 70, height = 1.75
+# Output: Your Body Mass Index is: 22.85
+
+# Problem 2 — Weekly Salary
+INPUT
+    hours_worked <- USER_INPUT (float) # total hours worked in the week
+    hourly_rate <- USER_INPUT (float) # amount paid per hour
+
+PROCESS
+    salary <- hours_worked * hourly_rate
+
+OUTPUT
+    PRINT "Your weekly salary is: " + salary
+
+# --- Sample Output ---
+# Input: hours_worked = 40, hourly_rate = 150
+# Output: Your weekly salary is: 6000
+
+# Problem 3 — Final Price with Discount and VAT
+INPUT
+    price <- USER_INPUT (float) # original price of the product
+    discount_rate <- USER_INPUT (float) # percentage discount (e.g., 0.20 for 20%)
+
+PROCESS
+    discounted_price <- price - (price * discount_rate)
+    total <- discounted_price * 1.16 # applying 16% VAT
+
+OUTPUT
+    PRINT "The final price after discount and VAT is: " + total
+
+# --- Sample Output ---
+# Input: price = 1000, discount_rate = 0.20
+# Output: The final price after discount and VAT is: 928
+
+# Problem 4 — Currency Conversion
+INPUT
+    amount_MXN <- USER_INPUT (float) # amount in Mexican pesos
+    exchange_rate_USD <- USER_INPUT (float) # current USD exchange rate
+    exchange_rate_EUR <- USER_INPUT (float) # current EUR exchange rate
+
+PROCESS
+    USD <- amount_MXN / exchange_rate_USD
+    EUR <- amount_MXN / exchange_rate_EUR
+
+OUTPUT
+    PRINT "Amount in USD: " + USD
+    PRINT "Amount in EUR: " + EUR
+
+# --- Sample Output ---
+# Input: amount_MXN = 1000, exchange_rate_USD = 18.50, exchange_rate_EUR = 20.00
+# Output: Amount in USD: 54.05 / Amount in EUR: 50.00
+
+# Problem 5 — Grade Average
+INPUT
+    grade1 <- USER_INPUT (float) # first grade
+    grade2 <- USER_INPUT (float) # second grade
+    grade3 <- USER_INPUT (float) # third grade
+
+PROCESS
+    average <- (grade1 + grade2 + grade3) / 3
+
+OUTPUT
+    PRINT "The average grade is: " + average
+
+# --- Sample Output ---
+# Input: grade1 = 85, grade2 = 90, grade3 = 95
+# Output: The average grade is: 90
