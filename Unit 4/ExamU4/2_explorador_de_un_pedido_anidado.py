@@ -1,4 +1,4 @@
-
+ 
 # INPUT
 pedido = {"folio": "A-100",
           "contenido": [
