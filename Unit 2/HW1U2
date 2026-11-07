@@ -1,0 +1,58 @@
+password_valida = False
+
+while password_valida == False:
+    # INPUT
+    password = input("Enter a password: ")
+    
+    # PROCESS
+    longitud_pass = len(password)
+    tiene_mayus = False
+    tiene_minus = False
+    tiene_num = False
+    tiene_esp = False
+    suma_digitos = 0
+    
+    # 1. Analizar caracter por caracter
+    for char in password:
+        if char >= 'A' and char <= 'Z':
+            tiene_mayus = True
+        if char >= 'a' and char <= 'z':
+            tiene_minus = True
+        if char >= '0' and char <= '9':
+            tiene_num = True
+            suma_digitos = suma_digitos + int(char)
+        if char == '!' or char == '@' or char == '#' or char == '$' or char == '%' or char == '^' or char == '&':
+            tiene_esp = True
+            
+    # 2. Verificar si la longitud es un número primo
+    divisores = 0
+    for j in range(1, longitud_pass + 1):
+        if longitud_pass % j == 0:
+            divisores = divisores + 1
+            
+    # 3. Verificar si incluye el mes actual (october)
+    tiene_mes = False
+    # Usamos el operador 'in' de strings, que es la forma natural en Python
+    if "october" in password:
+        tiene_mes = True
+
+    # OUTPUT
+    if longitud_pass < 8:
+        print("Your password must be at least 8 characters.")
+    elif tiene_mayus == False:
+        print("Add at least one uppercase letter.")
+    elif tiene_minus == False:
+        print("Add at least one lowercase letter.")
+    elif tiene_num == False:
+        print("Add at least one number.")
+    elif tiene_esp == False:
+        print("Add at least one special character (!@#$%^&).")
+    elif suma_digitos != 25:
+        print("The digits in your password must add up to 25.")
+    elif divisores != 2 or longitud_pass <= 1:
+        print("Your password length must be a prime number.")
+    elif tiene_mes == False:
+        print("Your password must include the current month in lowercase.")
+    else:
+        print("Success! Password valid.")
+        password_valida = True
