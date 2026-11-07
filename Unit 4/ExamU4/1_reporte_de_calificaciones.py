@@ -1,4 +1,4 @@
-
+ 
 # INPUT
 grupo = [9, 5, 7, 10, 4, 6, 8, 9]
 revisadas = 0
